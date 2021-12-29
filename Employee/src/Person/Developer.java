@@ -30,16 +30,16 @@ public class Developer extends Employee {
 	}
 
 	
-	// 10 % Bonus auf Mitarbeiter gehalt
+	@Override
 	public float getSalary() {
 		return salary + bonus;
 	}
 
 	@Override
 	public String toString() {
-		return  "Name = " + getName() + ", Emailadresse = "
+		return "Mitarbeiter_Id = "+ id +  ", Name = " + getName() + ", Emailadresse = "
 				+ getEmailadresse() + ", Phone = " + getPhone() + ", Departement = " + getDepartement()
-				+ ", Addresse = " + getAddresse() + ", Yearofbirth = " + getYearofbirth() + "Projekt_Name = "+ getProjectname();
+				+ ", Addresse = " + getAddresse() + ", Yearofbirth = " + getYearofbirth() + "Projekt_Name = "+ getProjectname() + "\nGehalt = "+ getSalary();
 	}
 
 	

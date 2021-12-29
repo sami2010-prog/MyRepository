@@ -3,6 +3,7 @@ package Person;
 
 public class Employee {
 
+	protected static int id = 0;
 	protected String name;
 	protected String emailadresse;
 	protected String phone;
@@ -17,12 +18,14 @@ public class Employee {
 
 	public Employee(String name, String emailadresse, String phone, String departement, String addresse,
 			int yearofbirth) {
+		
 		this.name = name;
 		this.emailadresse = emailadresse;
 		this.phone = phone;
 		this.departement = departement;
 		this.addresse = addresse;
 		this.yearofbirth = yearofbirth;
+		id++;
 	}
 
 	public String getName() {
@@ -83,9 +86,9 @@ public class Employee {
 	
 	@Override
 	public String toString() {
-		return  "Name = " + getName() + ", Emailadresse = "
+		return "Mitarbeiter_Id = "+ id + ", Name = " + getName() + ", Emailadresse = "
 				+ getEmailadresse() + ", Phone = " + getPhone() + ", Departement = " + getDepartement()
-				+ ", Addresse = " + getAddresse() + ", Yearofbirth = " + getYearofbirth() ;
+				+ ", Addresse = " + getAddresse() + ", Yearofbirth = " + getYearofbirth() + "\nGehalt = "+ getSalary() ;
 	}
 
 }
