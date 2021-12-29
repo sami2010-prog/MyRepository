@@ -80,5 +80,12 @@ public class Employee {
 	public void setSalary(float salary) {
 		this.salary = salary;
 	}
+	
+	@Override
+	public String toString() {
+		return  "Name = " + getName() + ", Emailadresse = "
+				+ getEmailadresse() + ", Phone = " + getPhone() + ", Departement = " + getDepartement()
+				+ ", Addresse = " + getAddresse() + ", Yearofbirth = " + getYearofbirth() ;
+	}
 
 }

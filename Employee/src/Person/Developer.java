@@ -4,6 +4,7 @@ package Person;
 public class Developer extends Employee {
 	
 	private String projectname;
+	private float bonus;
 	
 	public Developer(String name, String emailadresse, String phone, String departement, String addresse,
 			int yearofbirth, String projectname) {
@@ -20,19 +21,27 @@ public class Developer extends Employee {
 		this.projectname = projectname;
 	}
 
-	@Override
-	public String toString() {
-		return "Developer [" + "Name = " + getName() + ", Emailadresse = "
-				+ getEmailadresse() + ", Phone = " + getPhone() + ", Departement = " + getDepartement()
-				+ ", Addresse = " + getAddresse() + ", Yearofbirth = " + getYearofbirth() + ", Projectname = " + getProjectname() + "]" ;
+	public float getBonus() {
+		return bonus;
 	}
-	
-	// 10 % Bonus auf Mitarbeiter gehalt
-	public void setSalary(float salary) {
-		this.salary = salary + (salary * 10/100);
+
+	public void setBonus(float bonus) {
+		this.bonus = bonus;
 	}
 
 	
+	// 10 % Bonus auf Mitarbeiter gehalt
+	public float getSalary() {
+		return salary + bonus;
+	}
+
+	@Override
+	public String toString() {
+		return  "Name = " + getName() + ", Emailadresse = "
+				+ getEmailadresse() + ", Phone = " + getPhone() + ", Departement = " + getDepartement()
+				+ ", Addresse = " + getAddresse() + ", Yearofbirth = " + getYearofbirth() + "Projekt_Name = "+ getProjectname();
+	}
+
 	
 
 }
