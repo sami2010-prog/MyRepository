@@ -9,9 +9,9 @@ public class Developer extends Employee {
 
 	}
 
-	public Developer(String name, String email, String phone, String departement, String addresse, int yearofbirth,
+	public Developer(String name, String email, String phone, String addresse, int yearofbirth, Department dep,
 			String projectname) {
-		super(name, email, phone, departement, addresse, yearofbirth);
+		super(name, email, phone, addresse, yearofbirth, dep);
 		this.projectname = projectname;
 	}
 
@@ -39,8 +39,8 @@ public class Developer extends Employee {
 	@Override
 	public String toString() {
 		return "Mitarbeiter_Id = " + id + "\tName = " + getName() + "\tE-Mail = " + getemail() + "\tPhone = "
-				+ getPhone() + "\tDepartement = " + getDepartement() + "\tAddresse = " + getAddresse()
-				+ "\tYearofbirth = " + getYearofbirth() + "\tProjekt_Name = " + getProjectname() + "\nGehalt = "
+				+ getPhone() + "\tAddresse = " + getAddresse()
+				+ "\tYearofbirth = " + getYearofbirth()+ dep + "\tProjekt_Name = " + getProjectname() + "\nGehalt = "
 				+ getSalary();
 	}
 

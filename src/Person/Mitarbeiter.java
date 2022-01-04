@@ -10,9 +10,9 @@ public class Mitarbeiter extends Employee {
 
 	}
 
-	public Mitarbeiter(String name, String email, String phone, String departement, String addresse, int yearofbirth,
+	public Mitarbeiter(String name, String email, String phone, String addresse, int yearofbirth, Department dep,
 			float primie) {
-		super(name, email, phone, departement, addresse, yearofbirth);
+		super(name, email, phone, addresse, yearofbirth, dep);
 		this.primie = primie;
 	}
 
@@ -48,8 +48,8 @@ public class Mitarbeiter extends Employee {
 	@Override
 	public String toString() {
 		return "Mitarbeiter_Id = " + id + "\tName = " + getName() + "\tE-Mail = " + getemail() + "\tPhone = "
-				+ getPhone() + "\tDepartement = " + getDepartement() + "\tAddresse = " + getAddresse()
-				+ "\tYearofbirth = " + getYearofbirth() + "\nGehalt = " + getSalary();
+				+ getPhone() + "\tAddresse = " + getAddresse()
+				+ "\tYearofbirth = " + getYearofbirth() + dep + "\nGehalt = " + getSalary();
 	}
 
 	public void print() {

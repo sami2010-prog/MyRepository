@@ -6,25 +6,25 @@ public class Employee {
 	protected String name;
 	protected String email;
 	protected String phone;
-	protected String departement;
 	protected String addresse;
 	protected int yearofbirth;
 	protected float salary;
 	protected static int count = 1;
+	protected Department dep;
 
 	public Employee() {
 		// System.out.println("No Parameter Constructor");
 	}
 
-	public Employee(String name, String email, String phone, String departement, String addresse, int yearofbirth) {
+	public Employee(String name, String email, String phone, String addresse, int yearofbirth, Department dep) {
 
 		this.name = name;
 		this.email = email;
 		this.phone = phone;
-		this.departement = departement;
 		this.addresse = addresse;
 		this.yearofbirth = yearofbirth;
 		this.id = count;
+		this.dep = dep;
 		count++;
 	}
 
@@ -52,13 +52,6 @@ public class Employee {
 		this.phone = phone;
 	}
 
-	public String getDepartement() {
-		return departement;
-	}
-
-	public void setDepartement(String departement) {
-		this.departement = departement;
-	}
 
 	public String getAddresse() {
 		return addresse;
@@ -87,8 +80,8 @@ public class Employee {
 	@Override
 	public String toString() {
 		return "Mitarbeiter_Id = " + id + "\tName = " + getName() + "\tE-Mail = " + getemail() + "\tPhone = "
-				+ getPhone() + "\tDepartement = " + getDepartement() + "\tAddresse = " + getAddresse()
-				+ "\tYearofbirth = " + getYearofbirth() + "\nGehalt = " + getSalary();
+				+ getPhone() + "\tAddresse = " + getAddresse()
+				+ "\tYearofbirth = " + getYearofbirth()+ dep + "\nGehalt = " + getSalary();
 	}
 
 	public void print() {
